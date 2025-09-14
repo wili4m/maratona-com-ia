@@ -16,12 +16,12 @@ spec:
     spec:
       containers:
       - name: encontros-tech
-        image: fabricioveronez/encontros-tech:v1
+        image: wili4m/encontros-tech
         ports:
         - containerPort: 8000
         env:
         - name: DATABASE_URL
-          value: "postgresql://user:password@postgres-service:5432/encontrosdb"
+          value: "postgresql://doadmin:AVNS_cu1PURkBWPQECC3SNhj@db-homolog-do-user-25840928-0.e.db.ondigitalocean.com:25060/defaultdb?sslmode=require"
 ---
 apiVersion: v1
 kind: Service
