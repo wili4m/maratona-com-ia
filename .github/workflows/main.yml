@@ -44,7 +44,7 @@ jobs:
         uses: docker/build-push-action@v5
         with:
           context: ./src
-          file: •/src/Dockerfile
+          file: ./src/Dockerfile
           push: true
           tags: |
             wili4m/encontros-tech-labs:latest
