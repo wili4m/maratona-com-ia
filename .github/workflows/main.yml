@@ -32,7 +32,7 @@ jobs:
       - name: Execução dos Testes
         working-directory: ./src
         run: |
-          python -m pytest testes/ -v
+          python -m pytest tests/ -v
 
       - run: echo "Obter o código"
       - run: echo "Executar o Docker Build"
