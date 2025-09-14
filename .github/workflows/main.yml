@@ -48,7 +48,7 @@ jobs:
           push: true
           tags: |
             wili4m/encontros-tech-labs:latest
-            wili4m/encontros-tech-labs:v${ github.run_number }}
+            wili4m/encontros-tech-labs:v${{ github.run_number }}
   
   CD:
     runs-on: ubuntu-latest
