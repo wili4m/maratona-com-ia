@@ -1,8 +1,8 @@
+
 apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: encontros-tech
-  namespace: default
   labels:
     app: encontros-tech
 spec:
@@ -17,18 +17,20 @@ spec:
     spec:
       containers:
       - name: encontros-tech
-        image: wili4m/encontros-tech
+        image: fabricioveronez/encontros-tech:latest
         ports:
         - containerPort: 8000
         env:
         - name: DATABASE_URL
-          value: "postgresql://doadmin:AVNS_cu1PURkBWPQECC3SNhj@db-homolog-do-user-25840928-0.e.db.ondigitalocean.com:25060/defaultdb?sslmode=require"
+          valueFrom:
+            secretKeyRef:
+              name: database-secret
+              key: DATABASE_URL
 ---
 apiVersion: v1
 kind: Service
 metadata:
   name: encontros-tech
-  namespace: default
   labels:
     app: encontros-tech
 spec:
