@@ -18,7 +18,7 @@ jobs:
       # git checkout ...
       # Mas o Actions já faz isso automaticamente com Marketplace. 
       - name: Obtendo o código do projeto
-        uses: actions/checkout@v5 
+        uses: actions/checkout@v5.0.0
 
       - name: Setup do Python
         uses: actions/setup-python@v6
