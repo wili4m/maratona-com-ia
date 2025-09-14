@@ -22,6 +22,8 @@ jobs:
 
       - name: Setup do Python
         uses: actions/setup-python@v6
+        with:
+          python-version: '3.13'
 
       - name: Instalação das Dependencias
         working-directory: ./src
